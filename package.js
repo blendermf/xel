@@ -12,10 +12,10 @@ import * as JSMinifier from "terser";
 import * as JSBundler from "rollup";
 import ChangelogParser from "./classes/changelog-parser.js";
 
-import {dirname} from "path";
+import {dirname, sep, posix} from "path";
 import {fileURLToPath} from "url";
 
-let projectPath = dirname(fileURLToPath(import.meta.url));
+let projectPath = dirname(fileURLToPath(import.meta.url)).split(sep).join(posix.sep);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Portal
